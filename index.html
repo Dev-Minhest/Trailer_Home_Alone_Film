@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Landing Page Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/Netflix_Landing_Page_Website/style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="/Netflix_Landing_Page_Website/images/logo.png">
+        </a>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Lastest</a></li>
+            <li><a href="#">My List</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </header>
+    <div class="banner">
+        <img src="/Netflix_Landing_Page_Website/images/bg_1.jpg" class="bg">
+        <div class="content">
+            <img src="/Netflix_Landing_Page_Website/images/name.png" class="movieTitle">
+            <h4>
+                <span>2020</span>
+                <span><i>12+</i></span>
+                <span>1h 55min</span>
+                <span>Action</span>
+            </h4>
+            <p>
+                "Home Alone (original English title: Home Alone) 
+                is an American comedy film produced in 1990 about 
+                a boy Kevin who is abandoned by his family while on 
+                Christmas vacation because of a conflict with his mother. 
+                This time, very fun. Then he planned to set traps and give 
+                us lessons. He spent Christmas alone and saw his mother the 
+                next morning. He was very happy to see his family again. "
+            </p>
+            <div class="buttons">
+                <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Play</a>
+                <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
+            </div>
+        </div>
+        <a class="play" onclick="toggleVideo();">
+            <img src="/Netflix_Landing_Page_Website/images/play.png">
+            Watch Trailer
+        </a>
+    </div>
+
+    <div class="trailer">
+        <video src="/Netflix_Landing_Page_Website/images/Home_Alone_Trailer.mp4" controls="true" autoplay="true"></video>
+        <img src="/Netflix_Landing_Page_Website/images/close.png" class="close" onclick="toggleVideo();">
+    </div>
+
+    <script>
+        function toggleVideo() {
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+        
+    </script>
+</body>
+</html>
